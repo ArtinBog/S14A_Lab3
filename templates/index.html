@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+
+  <main class="hero-section">
+    <div class="container">
+      <div class="row">
+        <h1 class="title mx-5 mb-3 justify-align-center">Welcome to the Home page</h1>
+      </div>
+      <div class="row">
+        <div class="sm-3 ml-5">
+          <a class="btn btn-primary btn-xl js-scroll-trigger" href="/add_user">
+            Add New User
+          </a>
+        </div>
+        <div class="sm-3 mx-5">
+          <a class="btn btn-primary btn-xl js-scroll-trigger" href="{{ url_for('all_users') }}">
+            See All Users
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+{% endblock %}
