@@ -4,7 +4,7 @@
 <em>Total {{ all_users | length }} {% if all_users|length < 2  %} user {% else %} users {% endif %}</em>
 {% for user in all_users %}
 <div class="row m-4">
-    <div class="card col-sm-12">
+    <div class="card col-12">
       <div class="card-body">
         <h5 class="card-title">{{ user.first_name }} is {{ user.age }} years old</h5>
         <a href="{{ url_for('user_details', user_id=user.user_id) }}" class="btn btn-primary">More info</a>
