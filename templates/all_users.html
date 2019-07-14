@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<em>Total {{ all_users | length }} {% if all_users|length < 2  %} user {% else %} users {% endif %}</em>
+<em class="ml-5">Total {{ all_users | length }} {% if all_users|length < 2  %} user {% else %} users {% endif %}</em>
 {% for user in all_users %}
 <div class="row m-4">
     <div class="card col-12">
