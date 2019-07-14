@@ -1,7 +1,11 @@
 {% extends "layout.html" %}
 
 {% block content %}
+
+<!-- User Info -->
 <h1 class="my-4">{{user.first_name}} | {{user.age}} y.o. | User's ID: {{user.user_id}}</h1>
+
+<!-- Edit btn  -->
 <button class="btn btn-outline-secondary my-2 mx-2" id="btnEditUser" onclick="displayUpdateForm()" type="button" name="udate_btn">Edit</button>
 
 <!-- Delete user btn / modal trigger -->
@@ -18,7 +22,7 @@
   </form>
 </div>
 
-<!-- User Deletion Modal -->
+<!-- User Deletion Modal (pop-up) -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">

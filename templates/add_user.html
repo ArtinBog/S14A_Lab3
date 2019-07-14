@@ -5,7 +5,10 @@
     <div class="section-content">
       <h2>Add New User</h2>
       <form method="post" action="/add_user">
+        <!-- security tag -->
         {{ form.hidden_tag() }}
+
+        <!-- form -->
         <div class="form-group">
           {{ form.first_name.label }}
           {% if form.first_name.errors %}

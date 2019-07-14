@@ -10,10 +10,12 @@ heroku = Heroku(app)
 db.init_app(app)
 app.secret_key = "e14a-key"
 
+# Page: Home page
 @app.route("/")
 def index():
   return render_template("index.html")
 
+# Page: Add user
 @app.route("/add_user", methods=["GET", "POST"])
 def add_user():
     form = UsersForm()
@@ -33,17 +35,20 @@ def add_user():
         flash('Invalid input')
         return render_template('add_user.html')
 
+# Page: All users (cards)
 @app.route('/all_users')
 def all_users():
     all_users = User.query.all()
     return render_template('all_users.html', all_users=all_users)
 
+# Page: ser details
 @app.route('/user_details/<int:user_id>')
 def user_details(user_id):
     user = User.query.get(user_id)
     print('USER ::: ', type(user_id))
     return render_template('user_details.html', user=user)
 
+# Action: Delete user
 @app.route('/delete/<int:user_id>')
 def delete(user_id):
     user = User.query.get(user_id)
@@ -53,6 +58,7 @@ def delete(user_id):
     flash(user.first_name + ' was deleted from All Users')
     return render_template('index.html')
 
+# Action: Update
 @app.route('/update/<int:user_id>', methods=["GET", "POST"])
 def update(user_id):
     user = User.query.get(user_id)

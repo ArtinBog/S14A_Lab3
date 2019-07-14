@@ -6,15 +6,21 @@
 
   <main class="hero-section">
     <div class="container">
+
+      <!-- h1 Welcome Message -->
       <div class="row">
         <h1 class="title mx-5 my-5 justify-align-center">Welcome to the Home page</h1>
       </div>
       <div class="row">
+
+        <!-- Add new btn -->
         <div class="sm-3 ml-5">
           <a class="btn btn-primary btn-xl js-scroll-trigger" href="/add_user">
             Add New User
           </a>
         </div>
+
+        <!-- See all users btn -->
         <div class="sm-3 mx-5">
           <a class="btn btn-primary btn-xl js-scroll-trigger" href="{{ url_for('all_users') }}">
             See All Users
