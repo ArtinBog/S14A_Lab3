@@ -12,8 +12,8 @@
 <!-- Update Form -->
 <div class="" id="updateForms">
   <form class="" id="" action="{{url_for('update', user_id=user.user_id)}}" method="post">
-    <input type="text" name="first_name" value="{{user.first_name}}">
-    <input type="text" name="age" value="{{user.age}}">
+    <input class="mt-4 "type="text" name="first_name" value="{{user.first_name}}">
+    <input class="mb-4 mt-2" type="text" name="age" value="{{user.age}}">
     <button class="btn btn-primary" type="submit" name="button">Update</button>
   </form>
 </div>
