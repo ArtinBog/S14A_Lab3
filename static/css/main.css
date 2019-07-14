@@ -175,22 +175,14 @@ header {
   margin-bottom: 5px;
 }
 
-.form-group input {
-  /* border: none;
+.form-group input, input {
+  border: none;
   border-bottom: 2px solid #4285f4;
   background-color: transparent;
   color: #3a3a3a;
   font-size: 18px;
   padding: 5px 0;
-  width: 100%; */
-  font-family: 'Open Sans', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.23px;
-  padding: 12px 32px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
+  width: 100%;
 }
 
 .form-group input:focus {
