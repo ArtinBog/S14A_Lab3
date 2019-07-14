@@ -5,8 +5,8 @@ from forms import UsersForm
 from flask_heroku import Heroku
 
 app = Flask(__name__)
-# heroku = Heroku(app)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/lab3_db'
+heroku = Heroku(app)
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/lab3_db'
 db.init_app(app)
 app.secret_key = "e14a-key"
 
